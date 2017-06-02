@@ -1,4 +1,4 @@
-# from .fields import AddField, AlterField, RemoveField, RenameField
+from .fields import AddField, AlterField, RemoveField, RenameField
 from .models import (
     AddIndex, AlterIndexTogether, AlterModelManagers, AlterModelOptions,
     AlterModelTable, AlterOrderWithRespectTo, AlterUniqueTogether, CreateModel,
