@@ -4,14 +4,14 @@ import datetime
 from json import JSONEncoder
 from typing import Any, Dict, Iterable, Iterator, List, Optional, overload, Tuple, Type, Union
 
-from django.http.cookie import SimpleCookie
+import http.cookies
 import six
 
 class BadHeaderError(ValueError): ...
 
 class HttpResponseBase(six.Iterator):
     status_code = ...  # type: int
-    cookies = ...  # type: SimpleCookie
+    cookies = ...  # type: http.cookies.SimpleCookie
     closed = ...  # type: bool
     reason_phrase = ... # type: str
     charset = ... # type: str

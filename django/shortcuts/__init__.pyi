@@ -1,0 +1,3 @@
+from django.http.request import HttpRequest
+from typing import Optional
+def render(request: Optional[HttpRequest], template_name: str, context: dict, content_type: str, status: str, using: str) -> str: ...
