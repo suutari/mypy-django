@@ -2,11 +2,11 @@
 
 from typing import Any, Callable, Dict, List, Optional, overload, Tuple, Union
 
-from django.http.response import HttpResponse
+from django.http.response import HttpResponse as HttpResponse
 from django.urls.resolvers import (
-    RegexURLPattern, RegexURLResolver
+    RegexURLPattern as RegexURLPattern, RegexURLResolver as RegexURLResolver
 )
-from django.urls.resolvers import URLConf
+from django.urls.resolvers import URLConf as URLConf
 
 handler400 = ...  # type: str
 handler403 = ...  # type: str
