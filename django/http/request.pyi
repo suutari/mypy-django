@@ -7,7 +7,7 @@ from typing import (Any, BinaryIO, Dict, Iterable, Iterator, List, Optional, ove
 
 from django.core.files import uploadhandler, uploadedfile
 from django.utils.datastructures import MultiValueDict, ImmutableList
-from django.urls import ResolverMatch
+from django.urls.resolvers import ResolverMatch
 
 RAISE_ERROR = ...  # type: object
 host_validation_re = ...  # type: Pattern
