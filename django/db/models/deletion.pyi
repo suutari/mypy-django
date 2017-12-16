@@ -1,4 +1,4 @@
-from django.db import IntegrityError
+from django.db.utils import IntegrityError
 
 class ProtectedError(IntegrityError): ...
 

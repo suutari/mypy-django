@@ -3,7 +3,7 @@
 from typing import Any, Callable, Dict, List, Optional, overload, Tuple, Union
 
 from django.http.response import HttpResponse
-from django.urls import (
+from django.urls.resolvers import (
     RegexURLPattern, RegexURLResolver
 )
 from django.urls.resolvers import URLConf
