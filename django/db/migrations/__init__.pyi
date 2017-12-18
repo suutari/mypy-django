@@ -8,3 +8,5 @@ from .operations.models import (
     AlterModelTable as AlterModelTable, AlterOrderWithRespectTo as AlterOrderWithRespectTo, AlterUniqueTogether as AlterUniqueTogether, CreateModel as CreateModel,
     DeleteModel as DeleteModel, RemoveIndex as RemoveIndex, RenameModel as RenameModel,
 )
+
+from .operations.special import RunPython as RunPython
