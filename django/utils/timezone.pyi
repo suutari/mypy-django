@@ -1,7 +1,9 @@
 # Stubs for django.utils.timezone (Python 3.5)
 
 from typing import Any, Optional, Union
-from datetime import tzinfo, datetime, timedelta
+from datetime import tzinfo as tzinfo
+from datetime import datetime as datetime
+from datetime import timedelta as timedelta
 from contextlib import ContextDecorator
 
 class UTC(tzinfo):
