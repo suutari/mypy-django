@@ -5,7 +5,10 @@
 from . import Field
 from .related_descriptors import ForwardManyToOneDescriptor, ForwardOneToOneDescriptor, ManyToManyDescriptor, ReverseManyToOneDescriptor, ReverseOneToOneDescriptor
 from .related_lookups import RelatedExact, RelatedGreaterThan, RelatedGreaterThanOrEqual, RelatedIn, RelatedIsNull, RelatedLessThan, RelatedLessThanOrEqual
-from .reverse_related import ForeignObjectRel, ManyToManyRel, ManyToOneRel, OneToOneRel
+from .reverse_related import ForeignObjectRel as ForeignObjectRel
+from .reverse_related import ManyToManyRel as ManyToManyRel
+from .reverse_related import ManyToOneRel as ManyToOneRel
+from .reverse_related import OneToOneRel as OneToOneRel
 from typing import Any, Optional
 
 RECURSIVE_RELATIONSHIP_CONSTANT: str
