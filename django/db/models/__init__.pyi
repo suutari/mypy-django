@@ -7,7 +7,7 @@ from django.db.models.fields import *
 from django.db.models.indexes import *
 from django.core.exceptions import ObjectDoesNotExist as ObjectDoesNotExist
 #from django.db.models import signals as signals
-from django.db.models.base import DEFERRED as DEFERRED #, Model as Model
+from django.db.models.base import DEFERRED as DEFERRED, Model as Model
 from django.db.models.deletion import CASCADE as CASCADE, DO_NOTHING as DO_NOTHING, PROTECT as PROTECT, ProtectedError as ProtectedError, SET as SET, SET_DEFAULT as SET_DEFAULT, SET_NULL as SET_NULL
 from django.db.models.expressions import Case as Case, Exists as Exists, Expression as Expression, ExpressionWrapper as ExpressionWrapper, F as F, Func as Func, OuterRef as OuterRef, Subquery as Subquery, Value as Value, When as When
 from django.db.models.fields.files import FileField as FileField, ImageField as ImageField
@@ -15,10 +15,10 @@ from django.db.models.fields.proxy import OrderWrt as OrderWrt
 from django.db.models.fields.related import ForeignKey as ForeignKey, ForeignObject as ForeignObject, ManyToManyField as ManyToManyField, ManyToManyRel as ManyToManyRel, ManyToOneRel as ManyToOneRel, OneToOneField as OneToOneField, OneToOneRel as OneToOneRel
 from django.db.models.lookups import Lookup as Lookup, Transform as Transform
 from django.db.models.manager import Manager as Manager
-#from django.db.models.query import Prefetch as Prefetch
-#from django.db.models.query import Q as Q
+from django.db.models.query import Prefetch as Prefetch
+from django.db.models.query import Q as Q
 from django.db.models.query import QuerySet as QuerySet
-#from django.db.models.query import prefetch_related_objects as prefetch_related_objects
+from django.db.models.query import prefetch_related_objects as prefetch_related_objects
 
 def permalink(func): ...
 
