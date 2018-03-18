@@ -16,7 +16,7 @@ from .conf import (
     path as path,
     re_path as re_path,
 )
-from .exceptions import (
+from .exceptions import (  # type: ignore  # stub not done yet
     NoReverseMatch as NoReverseMatch,
     Resolver404 as Resolver404,
 )
