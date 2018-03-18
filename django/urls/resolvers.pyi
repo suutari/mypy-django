@@ -31,7 +31,15 @@ class ResolverMatch:
     namespaces = ...  # type: List[str]
     namespace = ...  # type: str
     view_name = ...  # type: str
-    def __init__(self, func: Callable, args: Iterable[object], kwargs: Params, url_name: str=None, app_names: Iterable[str]=None, namespaces: Iterable[str]=None) -> None: ...
+    def __init__(
+        self,
+        func: Callable,
+        args: Iterable[object],
+        kwargs: Params,
+        url_name: Optional[str]=None,
+        app_names: Optional[Iterable[str]]=None,
+        namespaces: Optional[Iterable[str]]=None,
+    ) -> None: ...
     def __getitem__(self, index: int) -> Any: ...
 
 def get_resolver(urlconf: Optional[URLConf]=None) -> 'RegexURLResolver': ...
@@ -46,7 +54,13 @@ class RegexURLPattern(LocaleRegexProvider):
     callback = ...  # type: _View
     default_args = ...  # type: Params
     name = ...  # type: Optional[str]
-    def __init__(self, regex: str, callback: _View, default_args: Params=None, name: str=None) -> None: ...
+    def __init__(
+        self,
+        regex: str,
+        callback: _View,
+        default_args: Optional[Params]=None,
+        name: Optional[str]=None,
+    ) -> None: ...
     def resolve(self, path: str) -> Optional[ResolverMatch]: ...
     def lookup_str(self) -> str: ...
 
@@ -55,7 +69,14 @@ class RegexURLResolver(LocaleRegexProvider):
     default_kwargs = ...  # type: Params
     namespace = ...  # type: Optional[str]
     app_name = ...  # type: Optional[str]
-    def __init__(self, regex: Optional[str], urlconf_name: URLConf, default_kwargs: Params=None, app_name: str=None, namespace: str=None) -> None: ...
+    def __init__(
+        self,
+        regex: Optional[str],
+        urlconf_name: URLConf,
+        default_kwargs: Optional[Params]=None,
+        app_name: Optional[str]=None,
+        namespace: Optional[str]=None,
+    ) -> None: ...
     @property
     def reverse_dict(self) -> ReverseLookup: ...
     @property
@@ -70,6 +91,13 @@ class RegexURLResolver(LocaleRegexProvider):
 
 class LocaleRegexURLResolver(RegexURLResolver):
     prefix_default_language = ...  # type: bool
-    def __init__(self, urlconf_name: URLConf, default_kwargs: Params=None, app_name: str=None, namespace: str=None, prefix_default_language: bool=True) -> None: ...
+    def __init__(
+        self,
+        urlconf_name: URLConf,
+        default_kwargs: Optional[Params]=None,
+        app_name: Optional[str]=None,
+        namespace: Optional[str]=None,
+        prefix_default_language: bool=True,
+    ) -> None: ...
     @property
     def regex(self) -> Pattern[str]: ...

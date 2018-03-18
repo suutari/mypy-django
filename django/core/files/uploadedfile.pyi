@@ -9,19 +9,49 @@ class UploadedFile(File):
     charset = ...  # type: Optional[str]
     content_type_extra = ...  # type: Optional[Dict[str, str]]
     _name = ...  # type: Optional[str]
-    def __init__(self, file: IO, name: Optional[str]=None, content_type: str=None, size: int=None, charset: str=None, content_type_extra: Dict[str, str]=None) -> None: ...
+    def __init__(
+        self,
+        file: IO,
+        name: Optional[str]=None,
+        content_type: Optional[str]=None,
+        size: Optional[int]=None,
+        charset: Optional[str]=None,
+        content_type_extra: Optional[Dict[str, str]]=None,
+    ) -> None: ...
     def _get_name(self) -> Optional[str]: ...
     def _set_name(self, name: Optional[str]) -> None: ...
 
 class TemporaryUploadedFile(UploadedFile):
-    def __init__(self, name: str, content_type: str, size: int, charset: str, content_type_extra: Dict[str, str]=None) -> None: ...
+    def __init__(
+        self,
+        name: str,
+        content_type: str,
+        size: int,
+        charset: str,
+        content_type_extra: Optional[Dict[str, str]]=None,
+    ) -> None: ...
     def temporary_file_path(self) -> str: ...
 
 class InMemoryUploadedFile(UploadedFile):
     field_name = ...  # type: Optional[str]
-    def __init__(self, file: IO, field_name: Optional[str], name: str, content_type: Optional[str], size: int, charset: Optional[str], content_type_extra: Dict[str, str]=None) -> None: ...
-    def chunks(self, chunk_size: int=None) -> Iterator[bytes]: ...
-    def multiple_chunks(self, chunk_size: int=None) -> bool: ...
+    def __init__(
+        self,
+        file: IO,
+        field_name: Optional[str],
+        name: str,
+        content_type: Optional[str],
+        size: int,
+        charset: Optional[str],
+        content_type_extra: Optional[Dict[str, str]]=None,
+    ) -> None: ...
+    def chunks(
+        self,
+        chunk_size: Optional[int]=None,
+    ) -> Iterator[bytes]: ...
+    def multiple_chunks(
+        self,
+        chunk_size: Optional[int]=None,
+    ) -> bool: ...
 
 class SimpleUploadedFile(InMemoryUploadedFile):
     def __init__(self, name: str, content: bytes, content_type: str='') -> None: ...
